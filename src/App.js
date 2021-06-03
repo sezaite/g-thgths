@@ -1,10 +1,10 @@
-import './App.scss';
-import Nav from './components/nav/Nav';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/home/Home';
 import Blogs from './components/blogs/Blogs';
 import Work from './components/work/Work';
+import './App.scss';
+import Nav from './components/nav/Nav';
 
 function App() {
   return (
@@ -30,3 +30,4 @@ function App() {
 }
 
 export default App;
+
