@@ -1,0 +1,14 @@
+footer {
+    height: 6vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h6 {
+        color: $secondary-color;
+    }
+}

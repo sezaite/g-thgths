@@ -5,6 +5,7 @@ import Blogs from './components/blogs/Blogs';
 import Work from './components/work/Work';
 import './App.scss';
 import Nav from './components/nav/Nav';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Blogs />
         </Route>
       </Switch>
+      <Footer />
     </Router>
   );
 }
