@@ -19,13 +19,15 @@ header {
     nav {
         display: flex;
         justify-content: space-around;
+        align-items: center;
 
         a, .menu-item {
             color: $secondary-color;
             text-decoration: none;
             margin-right: 50px;
             letter-spacing: 3px;
-            font-size: 16px;
+            font-size: 14px;
+            line-height: 14px;
         }
 
         .selected {

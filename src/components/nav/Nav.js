@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faSoundcloud, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 function Nav() {
     useEffect(() => {
@@ -40,9 +42,9 @@ function Nav() {
 
                 {/* change into links? */}
 
-                <a href="#" target="_blank" className="fa fa-soundcloud" aria-hidden="true"></a>
-                <a href="#" target="_blank" className="fa fa-instagram" aria-hidden="true"></a>
-                <a href="#" target="_blank" className="fa fa-twitter" aria-hidden="true"></a>
+                <a href="#" target="_blank" className="fa fa-soundcloud" aria-hidden="true"><FontAwesomeIcon icon={faSoundcloud} /></a>
+                <a href="#" target="_blank" className="fa fa-instagram" aria-hidden="true"><FontAwesomeIcon icon={faInstagram} /></a>
+                <a href="#" target="_blank" className="fa fa-twitter" aria-hidden="true"><FontAwesomeIcon icon={faTwitter} /></a>
             </nav>
         </header>
     )
