@@ -1,0 +1,159 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: $secondary-color;
+    z-index: 10;
+
+    .logo {
+        color: $secondary-color;
+        font-size: 20px;
+    }
+
+    //NAV LARGE WIDTH
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+
+        a, .menu-item {
+            color: $secondary-color;
+            text-decoration: none;
+            margin-right: 50px;
+            letter-spacing: 3px;
+            font-size: 16px;
+        }
+
+        .selected {
+            color: $accent-color;
+        }
+
+        a:last-of-type {
+            margin-right: 0;
+        }
+
+        a.fa {
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+        }
+
+        a:nth-last-child(3) {
+            margin-left: 50px;
+        }    
+    }
+
+    .nav-active {
+        transition: transform 0.5s ease-in;
+        transform: translateX(0%);
+    }
+
+    //BURGER NON-ACTIVE
+
+    .burger {
+        display: none;
+
+        div {
+            width: 25px;
+            height: 3px;
+            background-color: $secondary-color;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+//RESPONSIVE DESIGN
+
+@media (max-width: 1200px){
+    header nav a, header nav .menu-item {
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 1080px) {
+    header nav {
+        width: 60%;
+    }
+}
+
+@media (max-width: 960px) {
+
+    body {
+        overflow-x: hidden;
+
+        header {
+
+            nav {
+                position: fixed;
+                left: 0px;
+                height: 92vh;
+                top: 8vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                transform: translateX(-100%);
+                background-color: $main-color;
+    
+                a, .menu-item {
+                    opacity: 0;
+                }
+    
+                a:nth-last-child(3) {
+                    margin-left: 0;
+                }
+            }
+
+            .burger {
+                display: block;
+                cursor: pointer;
+            }
+        }   
+    }
+}
+
+@media (max-width: 680px){
+    body {
+
+        header {
+
+            .logo {
+                font-size: 14px;
+            } 
+
+            nav a, nav .menu-item {
+                margin: 0;
+            }
+        }
+    }
+}
+
+//BURGER ROTATION ANIMATION
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.x .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.x .line2 {
+    opacity: 0;
+}
+
+.x .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
