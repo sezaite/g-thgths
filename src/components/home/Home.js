@@ -7,13 +7,12 @@ import Contact from './contact/Contact';
 
 function Home() {
     return (
-        <>
+        <div className="home window">
             <Hero />
             <About />
             <Blogs />
             <Contact />
-
-        </>
+        </div>
     )
 }
 
