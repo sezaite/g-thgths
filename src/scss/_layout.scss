@@ -1,4 +1,4 @@
-body {
+.window {
     display: grid;
     grid-template-columns: 1fr;
 
@@ -31,7 +31,7 @@ body {
 }
 
 @media (max-width: 1300px) {
-    body {
+    .window {
 
         .container {
             grid-template-columns: 1fr 980px 1fr;
@@ -55,7 +55,7 @@ body {
 }   
 
 @media (max-width: 1080px) {
-    body {
+    .window {
 
         .container {
             grid-template-columns: 1fr 780px 1fr;
@@ -79,7 +79,7 @@ body {
 }   
 
 @media (max-width: 860px) {
-    body {
+    .window {
 
         .container {
             grid-template-columns: 1fr 640px 1fr;
@@ -103,7 +103,7 @@ body {
 }   
 
 @media (max-width: 860px) {
-    body {
+    .window {
 
         .container {
             grid-template-columns: 20px 1fr 20px;
