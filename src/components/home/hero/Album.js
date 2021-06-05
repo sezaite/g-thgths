@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 function Album({ id, imgLink, titles, description, spotifyLink }) {
     return (
-        <div className="album-art" style={{ backgroundImage: `url(${imgLink})` }}>
+        <div className="album-art" style={{ backgroundImage: `url(img/${imgLink})` }}>
 
-            < div className="blur" style={{ backgroundImage: `url(${imgLink})` }}></div >
+            < div className="blur" style={{ backgroundImage: `url(img/${imgLink})` }}></div >
             <div className="project-wrap">
                 {titles.map((title, index) => (
                     <Title key={index} name={title} />
