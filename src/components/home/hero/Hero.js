@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import Albums from './Albums';
 
-function Hero() {
+function Hero({ data }) {
     let i = 0;
     const txt = 'Producer  |  Ex-vegan  |  First-time visitor to Lithuania';
     const speed = 100;
@@ -19,6 +20,7 @@ function Hero() {
 
     useEffect(() => {
         typeWriter();
+        console.log(data);
     }, []);
 
     return (
@@ -29,7 +31,7 @@ function Hero() {
                     <p className="titles"></p>
                 </div>
                 <div className="col-6 col-sm-12 project-side">
-                    <div className='view'></div>
+                    <Albums data={data} />
                     <a href="./work.html" className='btn'>Show all projects</a>
                 </div>
             </div>

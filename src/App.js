@@ -36,13 +36,12 @@ function App() {
           'Accept': 'application/json'
         }
       }).then(data => {
-        console.log(data.data);
         cache.current[dataURL] = data.data;
         setData({
           blogs: data.data.blogs,
           albums: data.data.albums,
           isFetching: false
-        })
+        });
       })
     }
   }
