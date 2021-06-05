@@ -5,12 +5,12 @@ import Blogs from './main-blogs/Blogs';
 import Contact from './contact/Contact';
 
 
-function Home() {
+function Home({ data }) {
     return (
         <div className="home window">
-            <Hero />
+            <Hero data={data.albums} />
             <About />
-            <Blogs />
+            <Blogs data={data.blogs} />
             <Contact />
         </div>
     )

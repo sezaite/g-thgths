@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogList from './BlogList';
 
-function Blogs() {
+function Blogs({ data }) {
     return (
         <section className="container news">
             <div className="row">
@@ -9,7 +9,7 @@ function Blogs() {
 
             </div>
             <div className="row container view">
-                <BlogList />
+                <BlogList data={data} />
             </div>
         </section>
     )

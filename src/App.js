@@ -10,36 +10,45 @@ import axios from "axios";
 
 function App() {
   const cache = useRef({});
-  const dataURL = '#';
+  const dataURL = 'data.json';
   const [data, setData] = useState({
     albums: [],
+    blogs: [],
     isFetching: false
   });
 
-  const getData = async () => {
+  const getData = () => {
     setData({
-      albums: [],
+      ...data,
       isFetching: true
     });
-    if (cache.current[url]) {
-      const data = cache.current[url];
+    if (cache.current[dataURL]) {
+      const data = cache.current[dataURL];
       setData({
         albums: data.albums,
+        blogs: data.blogs,
         isFetching: false
       });
     } else {
-      const data = await axios.get(dataURL);
-      cache.current[url] = data;
-      setData({
-        albums: data.albums,
-        isFetching: false
+      axios.get(dataURL, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }).then(data => {
+        console.log(data.data);
+        cache.current[dataURL] = data.data;
+        setData({
+          blogs: data.data.blogs,
+          albums: data.data.albums,
+          isFetching: false
+        })
       })
     }
-
   }
 
   useEffect(() => {
-    getData();
+    const data = getData();
   }, []);
 
 
@@ -48,17 +57,17 @@ function App() {
       <Nav />
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <Home data={data} />
         </Route>
       </Switch>
       <Switch>
         <Route path="/work">
-          <Work />
+          <Work data={data.albums} />
         </Route>
       </Switch>
       <Switch>
         <Route path="/blogs">
-          <Blogs />
+          <Blogs data={data.blogs} />
         </Route>
       </Switch>
       <Footer />

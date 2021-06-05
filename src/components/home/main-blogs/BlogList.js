@@ -1,12 +1,12 @@
 import React from 'react';
-import BlogLink from './BlogLink';
+import BlogItem from './BlogItem';
 
-function BlogList({ blogs }) {
+function BlogList({ data }) {
     return (
         <div className="list row col-12">
             {
-                blogs.map((blog) => (
-                    <BlogLink key={blog.id} />
+                data.map((blog) => (
+                    <BlogItem key={blog.id} />
                 ))
             }
         </div>

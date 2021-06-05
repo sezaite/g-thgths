@@ -1,6 +1,7 @@
 import React from 'react'
 
-function BlogLink() {
+function BlogItem
+    () {
     return (
         <div className="article col-lg-4 col-3 col-md-6 col-xs-12">
             <div className="article-wrapper">
@@ -13,4 +14,5 @@ function BlogLink() {
     )
 }
 
-export default BlogLink
+export default BlogItem
+
