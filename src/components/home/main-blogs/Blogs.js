@@ -6,7 +6,6 @@ function Blogs({ data }) {
         <section className="container news">
             <div className="row">
                 <h2 className="col-12">Latest Blog post</h2>
-
             </div>
             <div className="row container view">
                 <BlogList data={data} />
