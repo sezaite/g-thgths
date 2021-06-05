@@ -9,7 +9,6 @@ function Hero({ data }) {
 
     useEffect(() => {
         typeWriter();
-        console.log(data);
     }, []);
 
     return (

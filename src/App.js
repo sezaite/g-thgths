@@ -23,10 +23,10 @@ function App() {
       isFetching: true
     });
     if (cache.current[dataURL]) {
-      const data = cache.current[dataURL];
+      const cacheData = cache.current[dataURL];
       setData({
-        albums: data.albums,
-        blogs: data.blogs,
+        albums: cacheData.albums,
+        blogs: cacheData.blogs,
         isFetching: false
       });
     } else {
@@ -35,11 +35,11 @@ function App() {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
-      }).then(data => {
-        cache.current[dataURL] = data.data;
+      }).then(resp => {
+        cache.current[dataURL] = resp.data;
         setData({
-          blogs: data.data.blogs,
-          albums: data.data.albums,
+          blogs: resp.data.blogs,
+          albums: resp.data.albums,
           isFetching: false
         });
       })
@@ -47,7 +47,7 @@ function App() {
   }
 
   useEffect(() => {
-    const data = getData();
+    getData();
   }, []);
 
 
