@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Albums from './Albums';
+import Link from 'react-router-dom';
 
 function Hero({ data }) {
     let i = 0;
@@ -26,13 +27,13 @@ function Hero({ data }) {
     return (
         <section className="container hero">
             <div className="row">
-                <div className="col-6 col-sm-12">
+                <div className="col-6 col-sm-12 hero-left">
                     <h1>Sam Shepherd</h1>
                     <p className="titles"></p>
                 </div>
-                <div className="col-6 col-sm-12 project-side">
+                <div className="col-6 col-sm-12 hero-right">
                     <Albums data={data} />
-                    <a href="./work.html" className='btn'>Show all projects</a>
+                    <Link to="./work.html" className='btn large-btn'>Show all projects</Link>
                 </div>
             </div>
         </section>

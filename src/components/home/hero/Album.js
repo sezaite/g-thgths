@@ -6,12 +6,12 @@ function Album({ id, imgLink, titles, description, spotifyLink }) {
     return (
         <div className="album-art" style={{ backgroundImage: `url(img/${imgLink})` }}>
 
-            < div className="blur" style={{ backgroundImage: `url(img/${imgLink})` }}></div >
+            <div className="blur" style={{ backgroundImage: `url(img/${imgLink})` }}></div >
             <div className="project-wrap">
                 {titles.map((title, index) => (
                     <Title key={index} name={title} />
                 ))}
-                <p>{description}<Link to="#">Read more...</Link></p>
+                <p>{description}<Link to="#" className="expand">Read more...</Link></p>
                 {/* <iframe src={spotifyLink} width='300' height='80' frameBorder='0' allowtransparency='true' allow='encrypted-media'></iframe> */}
             </div>
         </div >
