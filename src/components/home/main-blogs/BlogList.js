@@ -6,7 +6,7 @@ function BlogList({ data }) {
         <div className="list row col-12">
             {
                 data.map((blog) => (
-                    <BlogItem key={blog.id} />
+                    <BlogItem key={blog.id} header={blog.header} intro={blog.intro} date={blog.date} img={blog.imgLink} />
                 ))
             }
         </div>
