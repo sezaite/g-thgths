@@ -1,29 +1,22 @@
 import BlogList from './BlogList';
-import useHowManyItems from '../../helpers/useHowManyItems';
+import howManyItems from '../../helpers/howManyItems';
 import { useState, useEffect } from 'react';
 
 function Blogs({ data }) {
-    const articlesContainer = document.querySelector('.')
-    const [loadedItems, setLoadedItems] = useState(0);
-    const [toLoad, setToLoad] = useState(0);
+    const componentWidth = 200;
+    const [itemCount, setItemCount] = useState(howManyItems(componentWidth));
+    const [articleData, setArticleData] = useState(data.slice(0, itemCount));
+
     useEffect(() => {
-        setToLoad(howManyToLoad());
-    }, []);
+        setArticleData(data.slice(0, itemCount));
+    }, [itemCount]); //ar cia reikia, ar jau su uzkrovimu bus redi stedi??
 
-    function howManyToLoad {
-        if (innerHeight > 1300) return 4;
-        if (innerHeight > 1080) return 3;
-        if (innerHeight > 680) return 2;
-        return 4;
-    }
-
-
-    const loadMore = e => {
+    const loadMore = (e) => {
         e.preventDefault();
-        const howManyItems = useHowManyItems();
-        loadArticles(howManyItems);
+        const currentCount = howManyItems(componentWidth);
+        const extraItems = itemCount % currentCount;
+        setItemCount(itemCount + (currentCount - extraItems) > data.length ? data.length : itemCount + (currentCount - extraItems));
     }
-
 
     return (
         <section className="container news">
@@ -31,7 +24,7 @@ function Blogs({ data }) {
                 <h2 className="col-12">Latest Blog posts</h2>
             </div>
             <div className="row container view">
-                <BlogList data={data} />
+                <BlogList data={articleData} />
             </div>
             <button onClick={loadMore}>Load More</button>
         </section>

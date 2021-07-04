@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/home/Home';
 import Blogs from './components/blogs/Blogs';
@@ -9,49 +9,33 @@ import Footer from './components/footer/Footer';
 import axios from "axios";
 
 function App() {
-  const cache = useRef({});
   const dataURL = 'data.json';
   const [data, setData] = useState({
     albums: [],
     blogs: [],
-    isFetching: false
+    isFetching: true
   });
 
   const getData = () => {
-    setData({
-      ...data,
-      isFetching: true
-    });
-    if (cache.current[dataURL]) {
-      const cacheData = cache.current[dataURL];
+    axios.get(dataURL, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }
+    }).then(resp => {
       setData({
-        albums: cacheData.albums,
-        blogs: cacheData.blogs,
+        blogs: resp.data.blogs,
+        albums: resp.data.albums,
         isFetching: false
       });
-    } else {
-      axios.get(dataURL, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      }).then(resp => {
-        cache.current[dataURL] = resp.data;
-        setData({
-          blogs: resp.data.blogs,
-          albums: resp.data.albums,
-          isFetching: false
-        });
-      })
-    }
+    })
   }
 
   useEffect(() => {
     getData();
   }, []);
 
-
-  return (
+  return data.isFetching ? <h1>Loading...</h1> : (
     <Router>
       <Nav />
       <Switch>
