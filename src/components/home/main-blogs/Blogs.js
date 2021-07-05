@@ -3,13 +3,19 @@ import howManyItems from '../../helpers/howManyItems';
 import { useState, useEffect } from 'react';
 
 function Blogs({ data }) {
-    const componentWidth = 200;
+    document.addEventListener('DOMContentLoaded', (event) => {
+        console.log('DOM fully loaded and parsed');
+    });
+    const componentWidth = 240;
+    const articleContainer = document.querySelector('#blog-list');
+    // console.log(articleContainer);
+    // console.log(articleContainer.clientWidth);
     const [itemCount, setItemCount] = useState(howManyItems(componentWidth));
     const [articleData, setArticleData] = useState(data.slice(0, itemCount));
 
     useEffect(() => {
         setArticleData(data.slice(0, itemCount));
-    }, [itemCount]); //ar cia reikia, ar jau su uzkrovimu bus redi stedi??
+    }, [itemCount]);
 
     const loadMore = (e) => {
         e.preventDefault();
@@ -19,15 +25,10 @@ function Blogs({ data }) {
     }
 
     return (
-        <section className="container news">
-            <div className="row">
-                <h2 className="col-12">Latest Blog posts</h2>
-            </div>
-            <div className="row container view">
-                <BlogList data={articleData} />
-            </div>
-            <button onClick={loadMore}>Load More</button>
-        </section>
+        <>
+            <BlogList data={articleData} />
+            <button className="btn loader col-12" onClick={loadMore}>Load More</button>
+        </>
     )
 }
 

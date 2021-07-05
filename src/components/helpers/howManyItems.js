@@ -1,5 +1,3 @@
-import React from 'react'
-
 function howManyItems(componentWidth) {
 
     let count = Math.floor(window.innerWidth / componentWidth);

@@ -6,16 +6,18 @@ import Contact from './contact/Contact';
 
 
 function Home({ data }) {
-    useEffect(() => {
-        console.log(data);
-        console.log('hello');
-
-    }, []);
     return (
         <div className="home window">
             <Hero data={data.albums} />
             <About />
-            <Blogs data={data.blogs} />
+            <section className="news container">
+                <div className="row">
+                    <h2 className="col-12">Latest Blog posts</h2>
+                    <div className="col-12" id="blog-list">
+                        <Blogs data={data.blogs} />
+                    </div>
+                </div>
+            </section>
             <Contact />
         </div>
     )
