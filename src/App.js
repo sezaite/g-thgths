@@ -37,7 +37,7 @@ function App() {
   // }, []);
 
   return isFetching ? <h1>Loading...</h1> : (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Nav />
       <Switch>
         {error && <h3>Data loading error</h3>}
