@@ -35,10 +35,10 @@ function Nav() {
             </div>
             <nav>
                 <NavLink to="/" className="menu-item home" activeClassName="selected">Home</NavLink>
-                <NavLink to="work" className="menu-item work" activeClassName="selected">Work</NavLink>
-                <NavLink to="about" className="menu-item about" activeClassName="selected">About</NavLink>
-                <NavLink to="blog" className="menu-item news" activeClassName="selected">News</NavLink>
-                <NavLink to="index" className="menu-item contact" activeClassName="selected">Contact</NavLink>
+                <NavLink to="/work" className="menu-item work" activeClassName="selected">Work</NavLink>
+                <NavLink to="/about" className="menu-item about" activeClassName="selected">About</NavLink>
+                <NavLink to="/blog" className="menu-item news" activeClassName="selected">News</NavLink>
+                <NavLink to="/index" className="menu-item contact" activeClassName="selected">Contact</NavLink>
 
                 {/* change into links? */}
 
