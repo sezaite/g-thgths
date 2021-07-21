@@ -6,39 +6,41 @@ import Work from './components/work/Work';
 import './App.scss';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
-import axios from "axios";
+import useFetch from './components/helpers/useFetch';
 
 function App() {
   const dataURL = 'data.json';
-  const [data, setData] = useState({
-    albums: [],
-    blogs: [],
-    isFetching: true
-  });
+  const { data, isFetching, error } = useFetch(dataURL);
+  // const [data, setData] = useState({
+  //   albums: [],
+  //   blogs: [],
+  //   isFetching: true
+  // });
 
-  const getData = () => {
-    axios.get(dataURL, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }).then(resp => {
-      setData({
-        blogs: resp.data.blogs,
-        albums: resp.data.albums,
-        isFetching: false
-      });
-    })
-  }
+  // const getData = () => {
+  //   axios.get(dataURL, {
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Accept': 'application/json'
+  //     }
+  //   }).then(resp => {
+  //     setData({
+  //       blogs: resp.data.blogs,
+  //       albums: resp.data.albums,
+  //       isFetching: false
+  //     });
+  //   })
+  // }
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
-  return data.isFetching ? <h1>Loading...</h1> : (
+  return isFetching ? <h1>Loading...</h1> : (
     <Router>
       <Nav />
       <Switch>
+        {error && <h3>Data loading error</h3>}
         <Route path="/" exact>
           <Home data={data} />
         </Route>
@@ -49,7 +51,7 @@ function App() {
         </Route>
       </Switch>
       <Switch>
-        <Route path="/blogs">
+        <Route path="/blogs/:id">
           <Blogs data={data.blogs} />
         </Route>
       </Switch>
