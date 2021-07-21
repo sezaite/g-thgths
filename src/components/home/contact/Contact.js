@@ -38,7 +38,7 @@ function Contact() {
                 <h2 className="col-12">Contact me</h2>
                 {error !== "" && <h4 className="error-msg col-12">{error}</h4>}
                 <div className="form-section col-6 col-sm-12">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Name:</label>
                     <input type="text" id="name" name="name" value={details.name} onChange={e => setDetails({ ...details, name: e.target.value })} placeholder="Enter your name..." />
                 </div>
                 <div className="form-section col-6 col-sm-12">
