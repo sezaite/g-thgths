@@ -1,4 +1,7 @@
 .container.header{
+    @media (max-width: 680px){
+        text-align: center;
+    }
     .header{
         font-size: 5rem;
         margin-bottom: 20px;
