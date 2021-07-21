@@ -27,10 +27,13 @@
 
 .read-more-button {
     @include btn;
+   
     height: 30px;
     width: 100px;
     display: block;
     margin: auto;
+    margin-top: 20px;
     font-size: 1.4rem;
-    text-align: center;
+    display: grid;
+    place-items: center;
 }
