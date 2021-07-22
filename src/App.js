@@ -38,18 +38,19 @@ function App() {
       <Nav />
       <Switch>
         {error && <h3>Data loading error</h3>}
-        <Route path="/" exact>
+        <Route exact path="/">
           <Home data={data} />
         </Route>
-      </Switch>
-      <Switch>
+
         <Route path="/work">
           <Work data={data.albums} />
         </Route>
-      </Switch>
-      <Switch>
+
         <Route path="/blogs/:id">
           <Blogs data={data.blogs} />
+        </Route>
+        <Route path="*">
+          <h1>404 Not found</h1>
         </Route>
       </Switch>
       <Footer />
