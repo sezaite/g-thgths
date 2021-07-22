@@ -9,7 +9,7 @@ import Footer from './components/footer/Footer';
 import useFetch from './components/helpers/useFetch';
 
 function App() {
-  const dataURL = 'data.json';
+  const dataURL = 'http://localhost:3000/g-thgths/data.json'; /* 'https://sezaite.github.io/g-thgths/data.json' */
   const { data, isFetching, error } = useFetch(dataURL);
   // const [data, setData] = useState({
   //   albums: [],
@@ -32,9 +32,9 @@ function App() {
   //   })
   // }
 
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   return isFetching ? <h1>Loading...</h1> : (
     <Router basename={process.env.PUBLIC_URL}>

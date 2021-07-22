@@ -9,7 +9,8 @@ function WorkItem({ img, titles, date, albumName, header, description, paragraph
     return (
         <div className="row">
             <div className="col-4 col-md-4 col-sm-12 work-left">
-                <img src={`img/${img}`} alt="album-art" />
+                <img src={`https://sezaite.github.io/g-thgths/img/${img}`} alt="album-art" />
+                {/* https://sezaite.github.io/g-thgths/img/${img} */}
                 <h5>{albumName}</h5>
             </div>
             <div className="col-8 col-md-8 col-sm-12 work-right">

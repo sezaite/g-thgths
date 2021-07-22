@@ -8,12 +8,14 @@ const useFetch = (url) => {
 
     useEffect(() => {
         if (!url) return;
+        console.log('dont asdfasdf')
         axios.get(url).then(res => {
             setData(res.data);
             setIsFetching(false);
             setError(false)
         }).catch(err => {
             console.error(err);
+            console.log('kazkas ne to')
             setIsFetching(false);
             setError(true)
         })

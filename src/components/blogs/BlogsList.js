@@ -1,4 +1,4 @@
-import React from 'react'
+import BlogItem from './BLogPage'
 
 function BlogsList({ data }) {
     return (
