@@ -1,6 +1,5 @@
 .btn {
     @include btn;
-   
 }
 
 .btn:hover {
@@ -36,4 +35,5 @@
     font-size: 1.4rem;
     display: grid;
     place-items: center;
+    
 }

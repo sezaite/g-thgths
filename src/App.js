@@ -32,9 +32,6 @@ function App() {
   //   })
   // }
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   return isFetching ? <h1>Loading...</h1> : (
     <Router basename={process.env.PUBLIC_URL}>
