@@ -25,7 +25,14 @@ body, body * {
 
 html {
     font-size: 10px;
-    @media (max-width: 680px){
+    @media (max-width: 1080px){
         font-size: 9px;
     }
+    @media (max-width: 680px){
+        font-size: 8px;
+    }
+    @media (max-width: 400px){
+        font-size: 7px;
+    }
+
 }

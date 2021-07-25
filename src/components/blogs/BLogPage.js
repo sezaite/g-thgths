@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Header from '../Header';
 
-function BLogPage() {
+
+function BLogPage({ img, date, intro, header, text }) {
     return (
-        <div>
-            labas
-        </div>
+        <>
+            <Header title="Welcome to Me blogs" subtitle="Here I write about me work" />
+            <section className="container blog-page">
+
+            </section>
+        </>
     )
 }
 

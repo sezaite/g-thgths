@@ -9,7 +9,7 @@ import Footer from './components/footer/Footer';
 import useFetch from './components/helpers/useFetch';
 
 function App() {
-  const dataURL = 'http://localhost:3000/g-thgths/data.json'; /* 'https://sezaite.github.io/g-thgths/data.json' */
+  const dataURL = 'https://sezaite.github.io/g-thgths/data.json'; /* 'http://localhost:3000/g-thgths/data.json'; */
   const { data, isFetching, error } = useFetch(dataURL);
   // const [data, setData] = useState({
   //   albums: [],

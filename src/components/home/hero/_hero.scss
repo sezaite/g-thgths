@@ -1,17 +1,20 @@
 .container.hero {
-    overflow: hidden;
+    // overflow: hidden;
 
         .row {
 
             .hero-left {
+                text-align: center;
+                margin-top: 50%;
 
                 h1 {
 
-
+                    font-size: 4.2rem;
                 }
 
                 p {
-
+                    font-size: 1.8rem;
+                    margin-top: 20px;
 
                 }
             }
@@ -19,92 +22,94 @@
             .hero-right {
                 text-align: center;
 
+                .swiper-container {
 
-                .view {
-                    display: inline-block;
-                    width: 100%;
-                    overflow: hidden;
-                
-                    .list {
-                        display: inline-block;
-                        width: 100%;
-                        transition: all 1s;
+                   .swiper-wrapper {
+                        .swiper-slide {
 
-                        .album-art {
-                            margin-left: calc(50% - 220px);
-                            margin-bottom: 20px;
-                            width: 440px;
-                            height: 440px;   
-                            background-size: cover;  
-                            overflow: hidden;
-                            position: relative;
-                            text-align: center;
-                            background-color: $accent-color;
-
-                            .blur {
-                                background-size: cover;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                filter: blur(2px); 
-                                opacity: 0;
-                                transition: all 0.5s linear;
-                            
-                            }
-
-                            .blur:before {
-                                content: '';
-                                background-color: $secondary-color;
-                                opacity: 0.6;
-                                width: 100%;
-                                height: 100%;
-                                z-index: 1;
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                            }
-
-                            .blur.visible {
-                                opacity: 1;
-                            }
-
-                            .project-wrap {
-                                opacity: 0;
-                                width: 90%;
-                                height: 90%;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-                                transition: opacity 0.5s;
-                                z-index: 1;
-
-
-
-                                h4 {
-                                    display: inline-block;
-                                    margin: 0px 7px;
-                                    font-size: 18px;
-                                    color: $secondary-color;
+                                .album-art {
+                                    margin-bottom: 20px;
+                                    width: 380px;
+                                    height: 380px;   
+                                    background-size: cover;  
                                     position: relative;
+                                    text-align: center;
+                                    overflow: hidden;
+                                    background-color: $accent-color;
+                                    @media(max-width: 860px){
+                                        width: 320px;
+                                        height: 320px; 
+                                    }
+                                    @media (max-width: 400px){
+                                        width: 180px;
+                                        height: 180px;
+                                    }
 
-                                    &::after {
-                                        content: "";
+                                    .blur {
+                                        background-size: cover;
                                         position: absolute;
-                                        width: 2px;
-                                        height: 18px;
-                                        line-height: 0;
-                                        background-color: var(--secondary-color);
-                                        margin: 0 7px;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        filter: blur(2px); 
+                                        // filter: grayscale(1);
+                                        opacity: 0;
+                                        transition: all 0.5s linear;
+                                        z-index: 1;
+                                    
                                     }
 
-                                    &:last-of-type::after {
-                                        display: none;
-                                    }
+                                   
+                                        .blur:before {
+                                            content: '';
+                                            background-color: $secondary-color;
+                                            opacity: 0.6;
+                                            width: 100%;
+                                            height: 100%;
+                                            z-index: 1;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
 
-                                }
+                                        .blur.visible {
+                                            opacity: 1;
+                                        }
+
+                                        .project-wrap {
+                                            opacity: 0;
+                                            width: 90%;
+                                            height: 90%;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            transition: opacity 0.5s;
+                                            z-index: 3;
+
+                                            h4 {
+                                                display: inline-block;
+                                                margin: 0px 7px;
+                                                font-size: 18px;
+                                                color: $main-color;
+                                                position: relative;
+
+                                                &::after {
+                                                    content: "";
+                                                    position: absolute;
+                                                    width: 2px;
+                                                    height: 18px;
+                                                    line-height: 0;
+                                                    background-color: $main-color;
+                                                    margin: 0 7px;
+                                                }
+
+                                                &:last-of-type::after {
+                                                    display: none;
+                                                }
+
+                                            }
 
 
 
@@ -112,7 +117,7 @@
                                     display: inline-block;
                                     width: 100%;
                                     font-size: 16px;
-                                    color: var(--secondary-color);
+                                    color: $main-color;
                                     position: absolute;
                                     top: 50%;
                                     left: 50%;
@@ -122,8 +127,8 @@
                                     //TRANSFER THIS TO CUSTOM???
                                     .expand { 
                                         display: block; 
-                                        color: $secondary-color; 
-                                        font-size: 20px;
+                                        color: $main-color; 
+                                        font-size: 18px;
                                     }
 
                                 }
@@ -147,7 +152,20 @@
                     }
 
                 }
+                   }
+                
+                   
 
+                }
+                .btn {
+                    font-size: 18px;
+                    width: 120px;
+                    height: 50px;
+                    border: 1px solid $secondary-color;
+                    background-color: $main-color;
+                    color: $secondary-color;
+                    transition: all 0.3s;
+                    box-shadow: 1px 1px 1px $secondary-color;
                 }
 
             }

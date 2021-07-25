@@ -6,6 +6,7 @@ import ReadMoreReact from 'read-more-react';
 
 function WorkItem({ img, titles, date, albumName, header, description, paragraph, spotify, width }) {
     const [fullText, setFulltext] = useState(width < 420 ? false : true);
+    const fparagraph = paragraph.replaceAll('<br>', '\n');
     return (
         <div className="row">
             <div className="col-4 col-md-4 col-sm-12 work-left">
@@ -18,8 +19,8 @@ function WorkItem({ img, titles, date, albumName, header, description, paragraph
                     <h3>{header}</h3>
                     <h5>{date}</h5>
                 </div>
-                {fullText ? <p>{paragraph}</p> : (
-                    <ReadMoreReact text={paragraph} readMoreText="Read more" min="400" ideal="500" max="700" />
+                {fullText ? <p>{fparagraph}</p> : (
+                    <ReadMoreReact text={fparagraph} readMoreText="Read more" min="400" ideal="500" max="700" />
                 )}
 
 
