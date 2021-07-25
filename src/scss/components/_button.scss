@@ -2,6 +2,11 @@
     @include btn;
 }
 
+.btn.large-btn {
+    width: 180px;
+    font-size: 1.6rem;
+}
+
 .btn:hover {
     // color: $main-color;
     background-color: darken($main-color, 5%);
