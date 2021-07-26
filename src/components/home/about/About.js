@@ -6,7 +6,7 @@ function About() {
             <div className="row">
                 <h2 className="col-12">About me</h2>
                 <div className="about-right col-3">
-                    {/* <img src=" ./img/portrait.jpg" alt="my_profile_picture"> */}
+                    <img src=" ./img/portrait.jpg" alt="my_profile_picture" />
                 </div>
 
                 <div className="about-left col-8 col-sm-12">
