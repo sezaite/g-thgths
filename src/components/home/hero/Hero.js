@@ -9,7 +9,7 @@ function Hero({ data }) {
     const heroAlbums = data.filter((album) => (album.isInHeroSection));
 
     useEffect(() => {
-        typeWriter();
+        typeWriter(true);
         // const albums = document.querySelector(".album-art");
         // for (let album in albums) {
         //     album.addEventListener('mouseenter', () => {
@@ -24,6 +24,9 @@ function Hero({ data }) {
 
         //     };
         // }
+        return () => {
+            typeWriter(false);
+        }
     }, []);
 
     return (

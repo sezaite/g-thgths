@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './components/home/Home';
-import Blogs from './components/blogs/Blogs';
+import BlogPage from './components/blogs/BlogPage';
 import Work from './components/work/Work';
 import './App.scss';
 import Nav from './components/nav/Nav';
@@ -11,27 +11,6 @@ import useFetch from './components/helpers/useFetch';
 function App() {
   const dataURL = 'https://sezaite.github.io/g-thgths/data.json'; /* 'http://localhost:3000/g-thgths/data.json'; */
   const { data, isFetching, error } = useFetch(dataURL);
-  // const [data, setData] = useState({
-  //   albums: [],
-  //   blogs: [],
-  //   isFetching: true
-  // });
-
-  // const getData = () => {
-  //   axios.get(dataURL, {
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json'
-  //     }
-  //   }).then(resp => {
-  //     setData({
-  //       blogs: resp.data.blogs,
-  //       albums: resp.data.albums,
-  //       isFetching: false
-  //     });
-  //   })
-  // }
-
 
   return isFetching ? <h1>Loading...</h1> : (
     <Router basename={process.env.PUBLIC_URL}>
@@ -47,7 +26,7 @@ function App() {
         </Route>
 
         <Route path="/blogs/:id">
-          <Blogs data={data.blogs} />
+          <BlogPage data={data.blogs} />
         </Route>
         <Route path="*">
           <h1>404 Not found</h1>

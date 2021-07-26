@@ -1,60 +1,60 @@
-.news.container{
-    h2 {
-        display: inline-block;
-        width: 100%;
-    }
-    .article-list {
-       display: flex;
-       flex-wrap: wrap;
-       justify-content: space-around;
-       width: 100%;
+// .news.container{
+//     h2 {
+//         display: inline-block;
+//         width: 100%;
+//     }
+//     .article-list {
+//        display: flex;
+//        flex-wrap: wrap;
+//        justify-content: space-around;
+//        width: 100%;
         
-        .article {
-            border: 3px solid yellow;
-            position: relative;
-            width: 240px;
-            height: 260px;
+//         .article {
+//             border: 3px solid yellow;
+//             position: relative;
+//             width: 240px;
+//             height: 260px;
 
-            .article-wrapper{
-                width: 80%;
-                height: 90%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                color: $main-light-color;
-                transform: translate(-50%, -50%);
-                z-index: 3;
-                text-align: center;
+//             .article-wrapper{
+//                 width: 80%;
+//                 height: 90%;
+//                 position: absolute;
+//                 top: 50%;
+//                 left: 50%;
+//                 color: $main-light-color;
+//                 transform: translate(-50%, -50%);
+//                 z-index: 3;
+//                 text-align: center;
 
-                h5 {
-                    font-size: 18px;
-                }
+//                 h5 {
+//                     font-size: 18px;
+//                 }
 
-                .date {
-                    font-size: 12px;
-                    margin: 10px 0;
-                }
+//                 .date {
+//                     font-size: 12px;
+//                     margin: 10px 0;
+//                 }
 
-                .intro {
-                    font-size: 14px;
-                }
+//                 .intro {
+//                     font-size: 14px;
+//                 }
 
 
-            }
+//             }
 
-        .article::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            opacity: 0.6;
-        }
-        }
-    }
-}
+//         .article::after {
+//             content: '';
+//             position: absolute;
+//             width: 100%;
+//             height: 100%;
+//             background-color: black;
+//             opacity: 0.6;
+//         }
+//         }
+//     }
+// }
 
-#blog-list {
-    display: inline-block;
-    width: 100%;
-}
+// #blog-list {
+//     display: inline-block;
+//     width: 100%;
+// }

@@ -1,6 +1,6 @@
 let i = 0;
 const txt = 'Producer  |  Ex-vegan  |  First-time visitor to Lithuania';
-const speed = 100;
+const speed = 40;
 
 export function typeWriter() {
     if (window.innerWidth > 860) {

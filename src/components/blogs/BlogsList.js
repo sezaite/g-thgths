@@ -1,13 +1,13 @@
-import BlogItem from './BLogPage'
+// import BlogItem from './BlogPage'
 
-function BlogsList({ data }) {
-    return (
-        <>
-            {data.map((item) => (
-                <BlogItem key={item.id} img={`https://sezaite.github.io/g-thgths/img/${item.imgLink}`} date={item.date} intro={item.intro} header={item.header} text={item.text} />
-            ))}
-        </>
-    )
-}
+// function BlogsList({ data }) {
+//     return (
+//         <>
+//             {data.map((item) => (
+//                 <BlogItem key={item.id} img={`https://sezaite.github.io/g-thgths/img/${item.imgLink}`} date={item.date} intro={item.intro} header={item.header} text={item.text} />
+//             ))}
+//         </>
+//     )
+// }
 
-export default BlogsList
+// export default BlogsList

@@ -3,10 +3,10 @@ import BlogItem from './BlogItem';
 
 function BlogList({ data }) {
     return (
-        <div className="article-list">
+        <div className="article-list row">
             {
                 data.map((blog) => (
-                    <BlogItem key={blog.id} header={blog.header} intro={blog.intro} date={blog.date} img={blog.imgLink} />
+                    <BlogItem key={blog.id} id={parseInt(blog.id)} header={blog.header} intro={blog.intro} date={blog.date} img={blog.imgLink} />
                 ))
             }
         </div>
