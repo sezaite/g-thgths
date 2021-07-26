@@ -9,13 +9,6 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 
 function MySwiper({ data }) {
     SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
-    //get data
-    //map data and return slides
-    // const handleMouseEnter = (e) => {
-    //     console.log(e.target)
-    //     e.target.querySelector('.blur').classList.add('visible');
-    //     console.log(e.target)
-    // }
     return (
         <Swiper
             id="hero-swiper"
@@ -25,12 +18,11 @@ function MySwiper({ data }) {
             onSwiper={(swiper) => console.log(swiper)}
             navigation
             pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        // autoplay={{
-        //     delay: 2000,
-        //     pauseOnMouseEnter: true,
-        //     disableOnInteraction: false
-        // }}
+            autoplay={{
+                delay: 2000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false
+            }}
 
         >
             {data.map((album) => (

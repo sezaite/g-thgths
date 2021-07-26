@@ -23,7 +23,6 @@ function Hero({ data }) {
                 </div>
                 <div className="col-6 col-xsm-12 hero-right">
                     <MySwiper data={heroAlbums} />
-                    {/* <div className="controls">{[...Array(heroAlbums.length)].map((bubble, i) => <div className="control-bubble" key={i}></div>)}</div> */}
                     <Link to="./work">
                         <button className="btn large-btn">Show all projects</button>
                     </Link>
