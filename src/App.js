@@ -7,6 +7,7 @@ import './App.scss';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import useFetch from './components/helpers/useFetch';
+import ScrollToTop from './components/helpers/ScrollToTop';
 
 function App() {
   const dataURL = 'https://sezaite.github.io/g-thgths/data.json'; /* 'http://localhost:3000/g-thgths/data.json'; */
@@ -14,6 +15,7 @@ function App() {
 
   return isFetching ? <h1>Loading...</h1> : (
     <Router basename={process.env.PUBLIC_URL}>
+      <ScrollToTop />
       <Nav />
       <Switch>
         {error && <h3>Data loading error</h3>}

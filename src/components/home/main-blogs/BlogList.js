@@ -1,6 +1,7 @@
 import React from 'react';
 import BlogItem from './BlogItem';
 
+
 function BlogList({ data, header }) {
     return (
         <>
