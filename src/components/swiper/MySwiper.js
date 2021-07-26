@@ -25,12 +25,12 @@ function MySwiper({ data }) {
             onSwiper={(swiper) => console.log(swiper)}
             navigation
             pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
-            autoplay={{
-                delay: 2000,
-                pauseOnMouseEnter: true,
-                disableOnInteraction: false
-            }}
+        // scrollbar={{ draggable: true }}
+        // autoplay={{
+        //     delay: 2000,
+        //     pauseOnMouseEnter: true,
+        //     disableOnInteraction: false
+        // }}
 
         >
             {data.map((album) => (

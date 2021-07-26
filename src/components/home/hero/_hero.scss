@@ -34,6 +34,21 @@
 
                 .swiper-container {
                     padding-bottom: 40px;
+                    width: 440px;
+                    border: 1px solid rosybrown;
+                    text-align: center;
+                    @media(max-width: 1080px){
+                        width: 380px;
+                    }
+                    @media(max-width: 860px){
+                        width: 320px;
+                       
+                    }
+                    @media (max-width: 400px){
+                        width: 100%;
+                        
+                    }
+                    
                     
                     .swiper-button-next, .swiper-button-prev {
                         color: $accent-color;
@@ -53,6 +68,7 @@
                         }
                     
                    .swiper-wrapper {
+                      
                         .swiper-slide {
 
                                 .album-art {
@@ -69,10 +85,10 @@
                                         width: 300px;
                                         height: 300px; 
                                     }
-                                    // @media(max-width: 860px){
-                                    //     width: 250px;
-                                    //     height: 250px; 
-                                    // }
+                                     @media(max-width: 860px){
+                                         width: 250px;
+                                        height: 250px; 
+                                     }
                                     @media (max-width: 400px){
                                         width: 220px;
                                         height: 220px;
