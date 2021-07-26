@@ -9,24 +9,8 @@ function Hero({ data }) {
     const heroAlbums = data.filter((album) => (album.isInHeroSection));
 
     useEffect(() => {
-        typeWriter(true);
-        // const albums = document.querySelector(".album-art");
-        // for (let album in albums) {
-        //     album.addEventListener('mouseenter', () => {
-        //         album.classList.add("visible")
-        //     });
-        //     album.addEventListener('mouseleave', () => {
-        //         album.classList.remove("visible")
-        //     });
-        //     return () => {
-        //         album.removeEventListener('mouseenter', handleMouseEnter);
-        //         album.removeEventListener('mouseleave', handleMouseLeave);
-
-        //     };
-        // }
-        return () => {
-            typeWriter(false);
-        }
+        typeWriter();
+        return;
     }, []);
 
     return (

@@ -8,6 +8,7 @@ export function typeWriter() {
             document.querySelector(".hero .titles").innerHTML += txt.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
+
         }
     } else {
         document.querySelector(".hero .titles").innerHTML = txt;

@@ -9,15 +9,15 @@ function BlogPage({ data }) {
     const { id } = useParams();
     const item = data.find(item => item.id === parseInt(id));
     return (
-        <>
+        <div className="window">
             <Header title="Welcome to Me blogs" subtitle="Here I write about me work" />
-            <section className="container blog-page">
-                <FullArticle img={item.img} date={item.date} header={item.header} text={item.text} />
+            <section className="container current-blog">
+                <FullArticle img={item.imgLink} date={item.date} header={item.header} text={item.text} />
             </section>
-            <section className="container blogs">
+            <section className="container all-blogs">
                 <BlogList data={data} />
             </section>
-        </>
+        </div>
     )
 }
 

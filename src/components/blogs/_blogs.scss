@@ -1,16 +1,44 @@
-.container.blog-page {
+.container.current-blog {
     .row {
+        background-color: $main-light-color;
+        padding: 20px;
         h2 {
-
+            font-size: 2.8rem;
+            text-align: center;
+            margin-top: 20px;
         }
         h5 {
-
+            text-align: end;
+            font-size: 1.4rem;
+            font-weight: 200;
+            font-style: italic;
+            margin-right: 40px;
+          
         }
         img {
-
+            width: 650px;
+            margin: auto;
+            @media(max-width: 860px){
+                width: 500px;
+            }
+            @media(max-width: 680px){
+                width: 360px;
+            }
+            @media(max-width: 400px){
+                width: 260px;
+            }
         }
         p {
-
+            text-align: justify;
+            margin: 10px 40px;
+            font-size: 1.6rem;
         }
+    }
+}
+
+.container.all-blogs {
+    background-color: $main-color !important;
+    .row {
+        background-color: $main-color;
     }
 }

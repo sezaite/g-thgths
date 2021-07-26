@@ -88,7 +88,7 @@
     "blogs": [
         {
             "id": 1,
-            "imgLink": "/blog3.jpg",
+            "imgLink": "blog3.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": " Perferendis explicabo nam facilis consequatur a minima delectus maiores fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -96,7 +96,7 @@
         },
         {
             "id": 2,
-            "imgLink": "/blog2.jpg",
+            "imgLink": "blog2.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "nam facilis  unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -104,7 +104,7 @@
         },
         {
             "id": 3,
-            "imgLink": "/blog1.jpg",
+            "imgLink": "blog1.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur facilis consequatur a minima delectus maiores fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -112,7 +112,7 @@
         },
         {
             "id": 4,
-            "imgLink": "/blog3.jpg",
+            "imgLink": "blog3.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur adipisicing elit.",
@@ -120,7 +120,7 @@
         },
         {
             "id": 5,
-            "imgLink": "/blog2.jpg",
+            "imgLink": "blog2.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur adipisicing elit. Perferendis facilis consequatur a minima delectus maiores fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -128,7 +128,7 @@
         },
         {
             "id": 6,
-            "imgLink": "/blog1.jpg",
+            "imgLink": "blog1.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur adipisicing elit. Perferendis explicabo nam delectus maiores fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -136,7 +136,7 @@
         },
         {
             "id": 7,
-            "imgLink": "/blog3.jpg",
+            "imgLink": "blog3.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur adipisicing elit. Perferendis explicabo fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -144,7 +144,7 @@
         },
         {
             "id": 8,
-            "imgLink": "/blog2.jpg",
+            "imgLink": "blog2.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "conlit. Perferendis explicabo consequatur a minima delefugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -152,7 +152,7 @@
         },
         {
             "id": 9,
-            "imgLink": "/blog1.jpg",
+            "imgLink": "blog1.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur adipiabo nam facilis consequatur a minima delectus maiores fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -160,7 +160,7 @@
         },
         {
             "id": 10,
-            "imgLink": "/blog3.jpg",
+            "imgLink": "blog3.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consectetur adipisis consequatur a minima delectus maiores fugiat unde officiis. Unde perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -168,7 +168,7 @@
         },
         {
             "id": 11,
-            "imgLink": "/blog2.jpg",
+            "imgLink": "blog2.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "consatur a minima delectus maindis deleniti odio voluptas, dolore ipsa accusantium maxime",
@@ -176,7 +176,7 @@
         },
         {
             "id": 12,
-            "imgLink": "/blog1.jpg",
+            "imgLink": "blog1.jpg",
             "header": "I liked being a manager",
             "date": "2021-09-19",
             "intro": "de perferendis deleniti odio voluptas, dolore ipsa accusantium maxime",
