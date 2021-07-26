@@ -1,16 +1,19 @@
 let i = 0;
 const txt = 'Producer  |  Ex-vegan  |  First-time visitor to Lithuania';
-const speed = 40;
+const speed = 100;
 
 export function typeWriter() {
+    const DOM = document.querySelector(".hero .titles");
+    if (!DOM) return;
     if (window.innerWidth > 860) {
         if (i < txt.length) {
-            document.querySelector(".hero .titles").innerHTML += txt.charAt(i);
+            DOM.innerHTML += txt.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
 
         }
     } else {
-        document.querySelector(".hero .titles").innerHTML = txt;
+        DOM.innerHTML = txt;
     }
+
 }

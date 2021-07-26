@@ -21,6 +21,9 @@
                 transform: translate(-50%, -50%);
                 z-index: 3;
                 text-align: center;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
             h5 {
                 font-size: 14px;
                 color: $main-light-color;
@@ -33,6 +36,21 @@
             .intro {
                 font-size: 14px;
                 color: $main-light-color;
+                text-align: start;
+                .LinesEllipsis-ellipsis {
+                    color: $main-light-color;
+                }
+            }
+            .read-more-link {
+                margin-top: 20px;
+                color: $accent-color;
+                font-size: 14px;
+                text-decoration: none;
+                font-weight: 700;
+                
+            }
+            .read-more-link:hover{
+                transform: scale(1.05);
             }
         }
     }

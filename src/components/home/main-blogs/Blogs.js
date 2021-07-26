@@ -2,7 +2,7 @@ import BlogList from './BlogList';
 import howManyItems from '../../helpers/howManyItems';
 import { useState, useEffect } from 'react';
 
-function Blogs({ data }) {
+function Blogs({ data, header }) {
     const componentWidth = 300;
     const [itemCount, setItemCount] = useState(howManyItems(componentWidth));
     const [articleData, setArticleData] = useState(data.slice(0, itemCount));
@@ -19,10 +19,12 @@ function Blogs({ data }) {
     }
 
     return (
-        <div className="container">
-            <BlogList data={articleData} />
-            <button className="btn loader col-12" onClick={loadMore}>Load More</button>
-        </div>
+        <section className="container blogs">
+            <div className="article-list row">
+                <BlogList data={articleData} header={header} />
+                <button className="btn loader col-12" onClick={loadMore}>Load More</button>
+            </div>
+        </section>
     )
 }
 

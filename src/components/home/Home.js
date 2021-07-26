@@ -10,14 +10,14 @@ function Home({ data }) {
         <div className="home window">
             <Hero data={data.albums} />
             <About />
-            <section className="news container">
+            {/* <section className="news container">
                 <div className="row">
                     <h2 className="col-12">Latest Blog posts</h2>
-                    <div className="col-12" id="blog-list">
-                        <Blogs data={data.blogs} />
-                    </div>
+                    <div className="col-12" id="blog-list"> */}
+            <Blogs data={data.blogs} header="Latest blogs" />
+            {/* </div>
                 </div>
-            </section>
+            </section> */}
             <Contact />
         </div>
     )

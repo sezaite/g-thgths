@@ -3,6 +3,7 @@ import Header from '../Header';
 import FullArticle from './FullArticle';
 import { useParams, useHistory } from "react-router-dom";
 import BlogList from '../home/main-blogs/BlogList';
+import Blogs from '../home/main-blogs/Blogs';
 
 function BlogPage({ data }) {
     console.log('sveiki, cia bus jums datos:', data);
@@ -14,9 +15,8 @@ function BlogPage({ data }) {
             <section className="container current-blog">
                 <FullArticle img={item.imgLink} date={item.date} header={item.header} text={item.text} />
             </section>
-            <section className="container all-blogs">
-                <BlogList data={data} />
-            </section>
+            {/* <BlogList data={data} /> */}
+            <Blogs data={data} header="Other blogs" />
         </div>
     )
 }
